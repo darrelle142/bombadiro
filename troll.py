@@ -5,6 +5,8 @@ class Book:
 
     def __str__(self):
         return f"{self.title} by {self.author}"
+    '''def __repr__(self):
+        return f"Book({self.title!r}, {self.author!r})"'''
     
 class Library:
     def __init__(self, books: list[Book] = None): #Tránh bẫy "mutable default argument"
@@ -28,4 +30,5 @@ lib.add_book(Book("Python 101", "Someone"))
 lib.show_books()
 
 lib2 = Library.from_list([("A", "B"), ("C", "D")])
+"Dòng này để test"
 lib2.show_books()
