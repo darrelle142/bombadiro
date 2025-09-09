@@ -5,8 +5,6 @@ class Book:
 
     def __str__(self):
         return f"{self.title} by {self.author}"
-    '''def __repr__(self):
-        return f"Book({self.title!r}, {self.author!r})"'''
     
 class Library:
     def __init__(self, books: list[Book] = None): #Tránh bẫy "mutable default argument"
